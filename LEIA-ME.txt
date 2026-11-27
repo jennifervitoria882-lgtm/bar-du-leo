@@ -1,0 +1,33 @@
+BAR DU LÉO — VERSÃO ESTÁTICA PARA GITHUB PAGES
+
+ABRIR LOCALMENTE
+1. Extraia o ZIP.
+2. Abra a pasta bar-du-leo no VS Code.
+3. Abra index.html com Live Server, ou publique a pasta no GitHub Pages.
+
+PUBLICAR NO GITHUB PAGES
+1. Crie/abra um repositório no GitHub.
+2. Envie o conteúdo desta pasta para a raiz do repositório (index.html deve ficar na raiz).
+3. Em Settings > Pages, escolha Deploy from a branch.
+4. Selecione a branch principal e a pasta /(root), salve e aguarde a publicação.
+5. Acesse o endereço informado pelo GitHub.
+
+PEDIDOS
+- O carrinho é salvo localmente no navegador.
+- A finalização abre o WhatsApp da loja (número cadastrado em produtos.js) com os itens, quantidades, preços, total, nome, endereço quando delivery e observações.
+- O pedido só chega à loja depois que o cliente toca em Enviar no WhatsApp.
+- Não existe banco de dados, painel administrativo ou servidor.
+- A taxa de entrega é confirmada pelo estabelecimento no WhatsApp.
+- O pedido mínimo para delivery e o bloqueio fora do horário seguem as configurações em produtos.js.
+
+PERSONALIZAÇÃO
+- Número do WhatsApp, pedido mínimo e bloqueio por horário: CONFIG em produtos.js.
+- Produtos, categorias, preços e descrições: PRODUCTS em produtos.js.
+- Fotos dos produtos: pasta imagens/produtos/.
+- As imagens originais foram preservadas.
+
+PRIVACIDADE
+A página politica.html descreve o funcionamento atual do site estático. O carrinho utiliza armazenamento local do navegador; os dados do checkout são colocados na mensagem do WhatsApp apenas após a ação do usuário.
+
+OBSERVAÇÃO
+Os produtos e preços originais foram mantidos. Revise os preços e o conteúdo do cardápio com a loja antes de utilizar comercialmente.

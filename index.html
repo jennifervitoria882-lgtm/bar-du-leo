@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bar du Léo | Boteco tradicional em Juiz de Fora desde 1963 | Cardápio e pedidos</title>
+  <meta name="description" content="Bar du Léo, boteco de praça no Jardim Glória, em Juiz de Fora (MG), desde 1963. Pastel, caldos, tira-gostos e cerveja gelada. Veja o cardápio e faça seu pedido pelo WhatsApp.">
+  <meta name="theme-color" content="#1f6547">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Bar du Léo">
+  <meta property="og:title" content="Bar du Léo | Boteco de verdade, com alma de praça">
+  <meta property="og:description" content="Pastel, caldos, tira-gostos e cerveja gelada em Juiz de Fora desde 1963. Peça pelo WhatsApp.">
+  <meta property="og:image" content="imagens/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "Bar du Léo",
+    "description": "Boteco tradicional de praça no Jardim Glória, em Juiz de Fora, desde 1963.",
+    "image": "imagens/fachada.jpg",
+    "telephone": "+55 32 3215-9112",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Uruguaiana, 72",
+      "addressLocality": "Juiz de Fora",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:00", "closes": "17:00" }
+    ],
+    "sameAs": ["https://www.instagram.com/barduleo/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#cardapio">Ir para o cardápio</a>
+
+  <div class="top-strip">
+    <span>63 anos de tradição • Desde 1963</span>
+    <span class="status-pill" data-status><i aria-hidden="true"></i><span class="status-text">Verificando horário…</span></span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Bar du Léo - voltar ao início">
+      <img src="imagens/logo.jpg" alt="" width="44" height="44">
+      <span class="brand-name">BAR DU <strong>LÉO</strong></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#historia">Nossa história</a>
+      <a href="#como-funciona">Como pedir</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="button button-outline button-cart" id="openCart" type="button" aria-haspopup="dialog">
+        <span class="cart-label">Meu pedido</span>
+        <span class="cart-count" id="cartCount" aria-label="itens no pedido" hidden>0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-image">
+        <img src="imagens/fachada.jpg" alt="Fachada do Bar du Léo, com letreiro verde, no Jardim Glória" width="828" height="999" fetchpriority="high">
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Jardim Glória • Juiz de Fora</p>
+        <h1>Boteco de verdade,<br><em>com alma de praça.</em></h1>
+        <p class="hero-lead">Pastel famoso, cerveja gelada, samba e uma história que faz parte de Juiz de Fora desde 1963.</p>
+        <div class="hero-actions">
+          <a class="button" href="#cardapio">Peça pelo nosso cardápio</a>
+          <a class="button button-ghost" href="#contato">Como chegar</a>
+        </div>
+        <span class="hero-note">63 anos de tradição</span>
+      </div>
+    </section>
+
+    <section class="quick-info" aria-label="Informações rápidas">
+      <div><span class="info-icon" aria-hidden="true">◷</span><strong>Tempo estimado</strong><small>30 a 40 minutos</small></div>
+      <div><span class="info-icon" aria-hidden="true">⌖</span><strong>Retirada ou delivery</strong><small>Consulte a taxa de entrega</small></div>
+      <div><span class="info-icon" aria-hidden="true">R$</span><strong>Pagamento</strong><small>Pix ou dinheiro</small></div>
+    </section>
+
+    <section class="section" id="cardapio" aria-labelledby="titulo-cardapio">
+      <div class="section-heading">
+        <p class="eyebrow">Feito para abrir o apetite</p>
+        <h2 id="titulo-cardapio">Nosso cardápio</h2>
+        <p>Escolha seus favoritos e monte seu pedido.</p>
+      </div>
+
+      <div class="catalog-tools">
+        <div class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Buscar no cardápio…" aria-label="Buscar produtos" autocomplete="off" enterkeyhint="search">
+        </div>
+        <select id="categoryFilter" aria-label="Filtrar por categoria"></select>
+      </div>
+      <div class="category-pills" id="categoryPills" role="group" aria-label="Categorias do cardápio"></div>
+      <p class="result-count" aria-live="polite"><span id="resultCount"></span> no cardápio</p>
+
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyProducts" hidden>
+        <p>Nenhum produto encontrado para essa busca.</p>
+        <button class="button button-outline" id="clearSearch" type="button">Limpar busca</button>
+      </div>
+      <p class="menu-footnote">Bebidas alcoólicas: venda proibida para menores de 18 anos. Valores sujeitos a alteração; a taxa de entrega é confirmada pelo bar.</p>
+    </section>
+
+    <section class="story-section" id="historia" aria-labelledby="titulo-historia">
+      <div class="story-photo">
+        <img src="imagens/historia-bar.jpg" alt="Fotografia antiga da fachada do Bar du Léo, quando ainda era mercearia" width="828" height="551" loading="lazy">
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow">Uma história de família</p>
+        <h2 id="titulo-historia">Desde 1963, fazendo parte da praça.</h2>
+        <p>O Bar du Léo nasceu em 1963 como uma mercearia dedicada à distribuição de pães, fundada por Avelino Vicente, o Léo, e Lecy. Com o tempo, tornou-se um tradicional boteco de praça no Jardim Glória — um lugar de encontros, sabores e boas histórias.</p>
+        <strong class="years-highlight">63 anos de tradição</strong>
+      </div>
+    </section>
+
+    <section class="section order-how" id="como-funciona" aria-labelledby="titulo-como">
+      <div class="section-heading">
+        <p class="eyebrow">É simples pedir</p>
+        <h2 id="titulo-como">Como funciona</h2>
+      </div>
+      <ol class="steps-grid">
+        <li><b>01</b><h3>Escolha</h3><p>Encontre seus produtos favoritos no cardápio.</p></li>
+        <li><b>02</b><h3>Monte seu pedido</h3><p>Confira quantidades e o valor no carrinho.</p></li>
+        <li><b>03</b><h3>Finalize</h3><p>Informe seu nome, o endereço (se for delivery) e observações.</p></li>
+        <li><b>04</b><h3>Envie pelo WhatsApp</h3><p>Seu pedido chega prontinho ao WhatsApp do Bar du Léo.</p></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <a class="brand brand-light" href="#inicio" aria-label="Bar du Léo - voltar ao topo">
+          <img src="imagens/logo.jpg" alt="" width="48" height="48" loading="lazy">
+          <span class="brand-name">BAR DU <strong>LÉO</strong></span>
+        </a>
+        <p>Boteco de verdade, com alma de praça. Desde 1963.</p>
+        <p class="status-pill status-pill-footer" data-status><i aria-hidden="true"></i><span class="status-text">Verificando horário…</span></p>
+        <p class="status-detail-wrap"><small class="status-detail"></small></p>
+      </div>
+
+      <div class="footer-col">
+        <h2>Contato</h2>
+        <address>
+          Rua Uruguaiana, 72<br>Jardim Glória — Juiz de Fora, MG
+        </address>
+        <ul class="contact-list">
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Uruguaiana+72+Jardim+Gl%C3%B3ria+Juiz+de+Fora+MG" target="_blank" rel="noopener">Ver no mapa</a></li>
+          <li>Telefone: <a href="tel:+553232159112">(32) 3215-9112</a></li>
+          <li>WhatsApp: <a href="https://wa.me/5532988040130" target="_blank" rel="noopener">(32) 98804-0130</a></li>
+          <li>Instagram: <a href="https://www.instagram.com/barduleo/" target="_blank" rel="noopener">@barduleo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col hours-card">
+        <h2>Horário de funcionamento</h2>
+        <ul class="hours-list">
+          <li data-dia="1"><span>Segunda-feira</span><strong>Fechado</strong></li>
+          <li data-dia="2"><span>Terça-feira</span><strong>08h às 21h</strong></li>
+          <li data-dia="3"><span>Quarta-feira</span><strong>08h às 21h</strong></li>
+          <li data-dia="4"><span>Quinta-feira</span><strong>08h às 21h</strong></li>
+          <li data-dia="5"><span>Sexta-feira</span><strong>08h às 21h</strong></li>
+          <li data-dia="6"><span>Sábado</span><strong>10h às 17h</strong></li>
+          <li data-dia="0"><span>Domingo</span><strong>10h às 17h</strong></li>
+        </ul>
+        <small>Pedidos sujeitos ao horário de funcionamento.</small>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Bar du Léo • Desde 1963</span>
+      <nav aria-label="Links do rodapé">
+        <a href="#cardapio">Cardápio</a>
+        <a href="politica.html">Política de Privacidade</a>
+      </nav>
+    </div>
+  </footer>
+
+  <button class="cart-bar" id="cartBar" type="button" hidden aria-label="Ver meu pedido">
+    <span>Ver meu pedido · <span id="cartBarText"></span></span>
+    <strong id="cartBarTotal"></strong>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="cart-dialog" id="cartDialog" aria-labelledby="cartTitle">
+    <div class="dialog-header">
+      <h2 id="cartTitle">Meu pedido</h2>
+      <button class="icon-button" id="closeCart" type="button" aria-label="Fechar">×</button>
+    </div>
+
+    <div class="cart-empty" id="cartEmpty" hidden>
+      <p><strong>Seu pedido está vazio.</strong></p>
+      <p class="muted">Escolha algo gostoso no cardápio para começar.</p>
+      <button class="button" id="emptyCartShop" type="button">Ver o cardápio</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div id="cartFooter" hidden>
+      <div class="cart-total"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div>
+      <p class="notice notice-warn" id="minNotice" hidden></p>
+      <p class="muted small">A taxa de entrega é confirmada pelo bar conforme a região atendida.</p>
+      <div class="dialog-actions">
+        <button class="button button-full" id="goCheckout" type="button">Continuar para finalizar</button>
+        <button class="button button-outline button-full" id="keepShopping" type="button">Continuar escolhendo</button>
+        <button class="link-button" id="clearCart" type="button">Esvaziar pedido</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/loja.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Finalizar pedido pelo WhatsApp | Bar du Léo</title>
+  <meta name="description" content="Finalize seu pedido no Bar du Léo: informe seus dados e envie o pedido pronto pelo WhatsApp.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1f6547">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-inner">
+  <header class="site-header site-header-simple">
+    <a class="brand" href="index.html" aria-label="Bar du Léo - página inicial">
+      <img src="imagens/logo.jpg" alt="" width="44" height="44">
+      <span class="brand-name">BAR DU <strong>LÉO</strong></span>
+    </a>
+    <a class="back-link" href="index.html#cardapio">← Voltar ao cardápio</a>
+  </header>
+
+  <main class="inner-main">
+    <div class="section-heading">
+      <p class="eyebrow">Só falta confirmar</p>
+      <h1 class="page-title">Finalizar pedido</h1>
+      <p>Preencha os dados e envie o pedido pronto para o WhatsApp do Bar du Léo.</p>
+    </div>
+
+    <p class="notice notice-warn" id="statusNotice" role="status" hidden></p>
+
+    <section class="panel empty-panel" id="emptyState" hidden>
+      <h2>Seu pedido está vazio</h2>
+      <p class="muted">Volte ao cardápio e escolha seus itens para continuar.</p>
+      <a class="button" href="index.html#cardapio">Ver o cardápio</a>
+    </section>
+
+    <div class="checkout-grid" id="checkoutContent">
+      <aside class="panel summary-panel" aria-labelledby="titulo-resumo">
+        <h2 id="titulo-resumo">Resumo do pedido</h2>
+        <div id="checkoutSummary"></div>
+        <div class="totals">
+          <p><span>Subtotal</span><strong id="checkoutSubtotal"></strong></p>
+          <p><span>Entrega</span><strong id="deliveryFee">A confirmar</strong></p>
+          <p class="total-line"><span>Total dos produtos</span><strong id="checkoutTotal"></strong></p>
+        </div>
+        <p class="notice notice-warn" id="minNotice" hidden></p>
+        <p class="muted small">A taxa de entrega depende da região e será confirmada pelo Bar du Léo no WhatsApp antes da preparação. Prazo estimado: 30 a 40 minutos.</p>
+        <a class="link-button" href="index.html#cardapio">Adicionar mais itens</a>
+      </aside>
+
+      <section class="panel form-panel" aria-labelledby="titulo-dados">
+        <h2 id="titulo-dados">Seus dados</h2>
+        <form id="checkoutForm" novalidate>
+          <div class="field">
+            <label for="customerName">Nome</label>
+            <input id="customerName" name="nome" autocomplete="name" maxlength="80" required aria-describedby="err-customerName">
+            <span class="field-error" id="err-customerName" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="deliveryType">Como deseja receber?</label>
+            <select id="deliveryType" name="entrega">
+              <option value="delivery">Delivery (pedido mínimo R$ 20,00)</option>
+              <option value="retirada">Retirada no bar</option>
+            </select>
+          </div>
+
+          <fieldset class="address-fields" id="addressFields">
+            <legend>Endereço de entrega</legend>
+            <div class="field">
+              <label for="street">Rua</label>
+              <input id="street" name="rua" autocomplete="address-line1" maxlength="100" aria-describedby="err-street">
+              <span class="field-error" id="err-street" role="alert"></span>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="number">Número</label>
+                <input id="number" name="numero" inputmode="numeric" maxlength="15" aria-describedby="err-number">
+                <span class="field-error" id="err-number" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="complement">Complemento <small>(opcional)</small></label>
+                <input id="complement" name="complemento" maxlength="60">
+              </div>
+            </div>
+            <div class="field">
+              <label for="neighborhood">Bairro</label>
+              <input id="neighborhood" name="bairro" autocomplete="address-level3" maxlength="60" aria-describedby="err-neighborhood">
+              <span class="field-error" id="err-neighborhood" role="alert"></span>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="cep">CEP <small>(opcional)</small></label>
+                <input id="cep" name="cep" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000">
+              </div>
+              <div class="field">
+                <label for="reference">Ponto de referência <small>(opcional)</small></label>
+                <input id="reference" name="referencia" maxlength="100">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="payment">Forma de pagamento</label>
+            <select id="payment" name="pagamento" required aria-describedby="err-payment">
+              <option value="">Selecione…</option>
+              <option value="Pix">Pix</option>
+              <option value="Dinheiro">Dinheiro</option>
+            </select>
+            <span class="field-error" id="err-payment" role="alert"></span>
+          </div>
+
+          <div class="field" id="changeField" hidden>
+            <label for="changeFor">Troco para quanto? <small>(opcional)</small></label>
+            <input id="changeFor" name="troco" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Ex.: 50" aria-describedby="err-changeFor">
+            <span class="field-error" id="err-changeFor" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="notes">Observações do pedido <small>(opcional)</small></label>
+            <textarea id="notes" name="observacoes" rows="3" maxlength="500" placeholder="Ex.: sem cebola, ponto da carne, portão azul…"></textarea>
+          </div>
+
+          <p class="form-hint">Ao finalizar, o WhatsApp do Bar du Léo será aberto com a mensagem do pedido pronta. <strong>O pedido só é enviado quando você tocar em “enviar” no WhatsApp.</strong> Os dados desta página não são armazenados pelo site (veja a <a href="politica.html">Política de Privacidade</a>).</p>
+
+          <p class="form-error" id="formError" role="alert"></p>
+          <button class="button button-whatsapp button-full" type="submit">Finalizar pedido pelo WhatsApp</button>
+        </form>
+      </section>
+    </div>
+
+    <section class="panel sent-panel" id="sentPanel" hidden aria-live="polite">
+      <h2>Quase lá!</h2>
+      <p>Abrimos o WhatsApp do Bar du Léo com o seu pedido. <strong>Toque em “enviar” na conversa</strong> para concluir.</p>
+      <p class="muted">Se o WhatsApp não abriu, use o botão abaixo.</p>
+      <div class="dialog-actions">
+        <a class="button button-whatsapp button-full" id="waAgain" href="#" target="_blank" rel="noopener">Abrir o WhatsApp novamente</a>
+        <button class="button button-outline button-full" id="newOrder" type="button">Já enviei — fazer novo pedido</button>
+        <a class="link-button" href="index.html#cardapio">Voltar ao cardápio (manter este pedido)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer-simple">
+    <div class="footer-bottom">
+      <span>© 2026 Bar du Léo • Rua Uruguaiana, 72 — Jardim Glória, Juiz de Fora (MG)</span>
+      <nav aria-label="Links do rodapé"><a href="index.html">Início</a><a href="politica.html">Política de Privacidade</a></nav>
+    </div>
+  </footer>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/loja.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
